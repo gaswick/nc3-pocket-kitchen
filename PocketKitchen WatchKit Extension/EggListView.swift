@@ -8,70 +8,48 @@
 import SwiftUI
 
 struct EggListView: View {
+    
     var body: some View {
-        VStack {
-            Text("How do you like your \n eggs?")
-                .font(.system(size: 14))
-                .multilineTextAlignment(.center)
-                .frame(height: 40, alignment: .center)
-                .padding(.top, 15)
+        NavigationView {
+            VStack {
+                Text("How do you like your \n eggs?")
+                    .font(.system(size: 14))
+                    .multilineTextAlignment(.center)
+                    .frame(height: 40, alignment: .center)
+                    .padding(.top)
 
-            optionButton(buttonName: "Boiled", buttonAction: {})
-            optionButton(buttonName: "Scrambled", buttonAction: {})
-            optionButton(buttonName: "Fried", buttonAction: {})
+                customNavLink(destination: AnyView(EggOptView(optEgg: "Boiled")), text: "Boiled")
+                customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: "Scrambled")
+                customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: "Fried")
+                    
+                    
+                
+            }
         }
     }
 }
 
-struct optionButton: View{
-    var buttonName:String
-    var buttonAction: () -> Void
+struct customNavLink: View{
+    var destination: AnyView
+    var text: String
     
     var body: some View{
-        Button(action: buttonAction , label: {
-            HStack{
-            Text(buttonName)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.vertical, 11)
-            .padding(.horizontal)
-            .background(
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(.orange)
-
-            )
-        }).frame(height: 40.0).buttonStyle(.plain)
-            .padding(.vertical, 3)
+        NavigationLink(destination: destination){
+            Text(text).bold()
+            
+        }
+        .frame(width: 183.0, height: 40.0)
+        .background(RoundedRectangle(cornerRadius: 22)
+        .fill(Color.init(UIColor(rgb: 0xEE921D)))
+        )
+        .foregroundColor(.black)
+        .buttonStyle(.plain)
+        .padding(.vertical, 1)
+        .buttonStyle(ThemeAnimationStyle())
     }
 }
 
 //---------------------------------
-
-struct EggOptView: View {
-    var optEgg: String = ""
-    var eggChoices: [String:[String]] = [
-        "Boiled":["Soft", "Medium", "Hard"],
-        "Fried":["Sunny Side Up", "Over Easy", "Over Hard"]
-    ]
-    
-    var body: some View {
-        VStack {
-            Text("How do you like your \n\(optEgg) eggs?")
-                .font(.system(size: 14))
-                .multilineTextAlignment(.center)
-                .frame(height: 40, alignment: .center)
-                .padding(.top, 15)
-
-            optionButton(buttonName: "\(eggChoices[optEgg] ?? nil)"  , buttonAction: {})
-            optionButton(buttonName: "Scrambled", buttonAction: {})
-            optionButton(buttonName: "Fried", buttonAction: {})
-        }
-    }
-}
-
 
 
 struct EggListView_Previews: PreviewProvider {
@@ -79,3 +57,4 @@ struct EggListView_Previews: PreviewProvider {
         EggListView()
     }
 }
+
