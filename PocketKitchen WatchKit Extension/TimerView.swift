@@ -8,7 +8,7 @@
 import SwiftUI
 //masih belum sampai nol
 struct TimerView: View {
-    @State var timeRemaining = 62
+    @State var timeRemaining = 10
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     func convertSecondToTime(timeInSeconds : Int) ->
@@ -24,7 +24,10 @@ struct TimerView: View {
         
         VStack {
             Text(convertSecondToTime(timeInSeconds: timeRemaining)).padding().font(.system(size: 60)).onReceive(timer){ _ in
+                if(timeRemaining>0){
                     timeRemaining -= 1
+                }
+                    
             }
         }
     }
