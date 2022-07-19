@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        StepView(stepCount: 1, allStepCount: 5)
-        //EggListView()
+        EggListView()
     }
     
 }
@@ -20,3 +19,13 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+// Egg List View
+// Tools Prep View
+// Ingredients Prep View
+// Egg Opt View
+// CountDown View
+// StepView && TimerView && TODO: Action View
+// Celebration View
+

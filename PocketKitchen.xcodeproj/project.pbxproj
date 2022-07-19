@@ -140,6 +140,7 @@
 				38A31686287E7B6C00D10554 /* ContentView.swift */,
 				38C855912884F02D00BE6968 /* StepView.swift */,
 				38C8558B28810E2500BE6968 /* EggListView.swift */,
+				3854DB9728865FB30054DC1E /* CountDownView.swift */,
 				38C8558D28811EA500BE6968 /* EggOptView.swift */,
 				1702998A28865BD4001A30A0 /* CountDownView.swift */,
 				38C8558F288136E300BE6968 /* Extension.swift */,
