@@ -18,9 +18,9 @@ struct EggListView: View {
                     .frame(height: 40, alignment: .center)
                     .padding(.top)
 
-                customNavLink(destination: AnyView(EggOptView(optEgg: "Boiled")), text: "Boiled")
-                customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: "Scrambled")
-                customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: "Fried")
+                customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Boiled")), text: "Boiled")
+                customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Scrambled")), text: "Scrambled")
+                customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Fried")), text: "Fried")
                     
                     
                 
