@@ -17,6 +17,9 @@
 		38A3168D287E7B6C00D10554 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3168C287E7B6C00D10554 /* ComplicationController.swift */; };
 		38A3168F287E7B6D00D10554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A3168E287E7B6D00D10554 /* Assets.xcassets */; };
 		38A31692287E7B6D00D10554 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A31691287E7B6D00D10554 /* Preview Assets.xcassets */; };
+		BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */; };
+		BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */; };
+		BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CBA2885798F006807BC /* TimerView.swift */; };
 		38C8558C28810E2500BE6968 /* EggListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558B28810E2500BE6968 /* EggListView.swift */; };
 		38C8558E28811EA500BE6968 /* EggOptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558D28811EA500BE6968 /* EggOptView.swift */; };
 		38C85590288136E300BE6968 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558F288136E300BE6968 /* Extension.swift */; };
@@ -79,6 +82,9 @@
 		38A31691287E7B6D00D10554 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38A31693287E7B6D00D10554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A31694287E7B6D00D10554 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsPreparationView.swift; sourceTree = "<group>"; };
+		BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPreparationView.swift; sourceTree = "<group>"; };
+		BD6F7CBA2885798F006807BC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		38C8558B28810E2500BE6968 /* EggListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggListView.swift; sourceTree = "<group>"; };
 		38C8558D28811EA500BE6968 /* EggOptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggOptView.swift; sourceTree = "<group>"; };
 		38C8558F288136E300BE6968 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 				38C8558D28811EA500BE6968 /* EggOptView.swift */,
 				38C8558F288136E300BE6968 /* Extension.swift */,
 				38A31688287E7B6C00D10554 /* NotificationController.swift */,
+				BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */,
+				BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */,
+				BD6F7CBA2885798F006807BC /* TimerView.swift */,
 				38A3168A287E7B6C00D10554 /* NotificationView.swift */,
 				38A3168C287E7B6C00D10554 /* ComplicationController.swift */,
 				38A3168E287E7B6D00D10554 /* Assets.xcassets */,
@@ -278,10 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */,
+				BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */,
 				38C8558C28810E2500BE6968 /* EggListView.swift in Sources */,
 				38A31689287E7B6C00D10554 /* NotificationController.swift in Sources */,
 				38C8558E28811EA500BE6968 /* EggOptView.swift in Sources */,
 				38A31687287E7B6C00D10554 /* ContentView.swift in Sources */,
+				BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */,
 				38A3168D287E7B6C00D10554 /* ComplicationController.swift in Sources */,
 				38C855922884F02D00BE6968 /* StepView.swift in Sources */,
 				38A31685287E7B6C00D10554 /* PocketKitchenApp.swift in Sources */,
