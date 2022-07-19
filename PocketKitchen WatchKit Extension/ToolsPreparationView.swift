@@ -12,25 +12,23 @@ struct ToolsPreparationView: View {
     var optEgg: String
     
     var body: some View {
-        
-            VStack{
-                Text("Tools you need to prepare")
-                    .font(.system(size: 15))
-                        .multilineTextAlignment(.center)
-                List{
-                    ForEach(recipes[optEgg]!.tools, id: \.self) { i in
-                        Text(i).font(.system(size: 13))
-                    }
+        VStack{
+            Text("Tools you need to prepare")
+                .font(.system(size: 15))
+                    .multilineTextAlignment(.center)
+            List{
+                ForEach(recipes[optEgg]!.tools, id: \.self) { i in
+                    Text(i).font(.system(size: 13))
                 }
-               
-                NavigationLink("Next", destination: IngredientsPreparationView())
-                    .frame(height: 40)
-                    //.padding(min(.infinity, 20))
-                    //.foregroundColor(.white)
-                    .background(.orange)
-                    .cornerRadius(9)
             }
-
+           
+            NavigationLink("Next", destination: IngredientsPreparationView(optEgg: optEgg))
+                .frame(height: 40)
+                //.padding(min(.infinity, 20))
+                //.foregroundColor(.white)
+                .background(.orange)
+                .cornerRadius(9)
+        }
     }
 }
 

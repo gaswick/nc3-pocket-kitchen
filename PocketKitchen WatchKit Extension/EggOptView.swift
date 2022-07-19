@@ -23,12 +23,14 @@ struct EggOptView: View {
             Text("How do you like your \n\(optEgg) eggs?")
                 .font(.system(size: 14))
                 .multilineTextAlignment(.center)
-                .frame(height: 40, alignment: .center)
-                .padding(.top, 15)
+              //  .frame(height: 40, alignment: .center)
+              //8  .padding(.top, 15)
             
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![0])
-            customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: recipes[optEgg]!.type![1])
-            customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: recipes[optEgg]!.type![2])
+            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![1])
+            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![2])
+//            customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: recipes[optEgg]!.type![1])
+//            customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: recipes[optEgg]!.type![2])
             
 
         }
