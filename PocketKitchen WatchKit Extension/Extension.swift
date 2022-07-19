@@ -40,7 +40,7 @@ struct ThemeAnimationStyle: ButtonStyle {
 }
 
 struct Recipe {
-    var recipeName: String
+//    var recipeName: String
     var type: [String]?
     var size: [String]?
     var tools: [String]

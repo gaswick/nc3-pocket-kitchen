@@ -12,13 +12,11 @@ var recipes = ContentView().recipes
 struct EggOptView: View {
     var optEgg: String
     
-    var eggChoices: [String:[String]] = [
-        
-        "Boiled":recipes[0].type!,
-            "Fried":recipes[2].type!
-//        "Boiled":["Soft", "Medium", "Hard"],
-//        "Fried":["Sunny Side Up", "Over Easy", "Over Hard"]
-    ]
+//    var eggChoices: [String:[String]] = [
+//        
+//        "Boiled":recipes[optEgg]!.type!,
+//        "Fried":recipes[optEgg]!.type!
+//    ]
     
     var body: some View {
         VStack {
@@ -28,9 +26,9 @@ struct EggOptView: View {
                 .frame(height: 40, alignment: .center)
                 .padding(.top, 15)
             
-            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: eggChoices[optEgg]![0])
-            customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: eggChoices[optEgg]![1])
-            customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: eggChoices[optEgg]![2])
+            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![0])
+            customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: recipes[optEgg]!.type![1])
+            customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: recipes[optEgg]!.type![2])
             
 
         }

@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ToolsPreparationView: View {
     //private var tool: [String] = ["Stove", "Spatula", "Non-Stick Pan", "Small Bowl"]
-    var recipes = ContentView().recipes
+    var optEgg: String
     
     var body: some View {
         
-        NavigationView {
             VStack{
                 Text("Tools you need to prepare")
                     .font(.system(size: 15))
                         .multilineTextAlignment(.center)
                 List{
-                    ForEach(self.recipes[1].tools, id: \.self) { i in
+                    ForEach(recipes[optEgg]!.tools, id: \.self) { i in
                         Text(i).font(.system(size: 13))
                     }
                 }
@@ -31,12 +30,12 @@ struct ToolsPreparationView: View {
                     .background(.orange)
                     .cornerRadius(9)
             }
-        }.navigationBarHidden(true)
+
     }
 }
 
 struct ToolsPreparationView_Previews: PreviewProvider {
     static var previews: some View {
-        ToolsPreparationView()
+        ToolsPreparationView(optEgg: "Boiled")
     }
 }
