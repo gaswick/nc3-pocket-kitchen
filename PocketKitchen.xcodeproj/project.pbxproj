@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1702998B28865BD4001A30A0 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702998A28865BD4001A30A0 /* CountDownView.swift */; };
+		1702998D28865C26001A30A0 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702998C28865C26001A30A0 /* CelebrationView.swift */; };
 		38A31675287E7B6900D10554 /* PocketKitchen WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 38A31674287E7B6900D10554 /* PocketKitchen WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38A3167A287E7B6C00D10554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A31679287E7B6C00D10554 /* Assets.xcassets */; };
 		38A31680287E7B6C00D10554 /* PocketKitchen WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38A3167F287E7B6C00D10554 /* PocketKitchen WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -17,13 +19,13 @@
 		38A3168D287E7B6C00D10554 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3168C287E7B6C00D10554 /* ComplicationController.swift */; };
 		38A3168F287E7B6D00D10554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A3168E287E7B6D00D10554 /* Assets.xcassets */; };
 		38A31692287E7B6D00D10554 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A31691287E7B6D00D10554 /* Preview Assets.xcassets */; };
-		BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */; };
-		BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */; };
-		BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CBA2885798F006807BC /* TimerView.swift */; };
 		38C8558C28810E2500BE6968 /* EggListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558B28810E2500BE6968 /* EggListView.swift */; };
 		38C8558E28811EA500BE6968 /* EggOptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558D28811EA500BE6968 /* EggOptView.swift */; };
 		38C85590288136E300BE6968 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8558F288136E300BE6968 /* Extension.swift */; };
 		38C855922884F02D00BE6968 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C855912884F02D00BE6968 /* StepView.swift */; };
+		BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */; };
+		BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */; };
+		BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CBA2885798F006807BC /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1702998A28865BD4001A30A0 /* CountDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
+		1702998C28865C26001A30A0 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
 		38A31670287E7B6900D10554 /* PocketKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A31674287E7B6900D10554 /* PocketKitchen WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PocketKitchen WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A31679287E7B6C00D10554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,13 +86,13 @@
 		38A31691287E7B6D00D10554 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38A31693287E7B6D00D10554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A31694287E7B6D00D10554 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsPreparationView.swift; sourceTree = "<group>"; };
-		BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPreparationView.swift; sourceTree = "<group>"; };
-		BD6F7CBA2885798F006807BC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		38C8558B28810E2500BE6968 /* EggListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggListView.swift; sourceTree = "<group>"; };
 		38C8558D28811EA500BE6968 /* EggOptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggOptView.swift; sourceTree = "<group>"; };
 		38C8558F288136E300BE6968 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		38C855912884F02D00BE6968 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsPreparationView.swift; sourceTree = "<group>"; };
+		BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPreparationView.swift; sourceTree = "<group>"; };
+		BD6F7CBA2885798F006807BC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +141,10 @@
 				38C855912884F02D00BE6968 /* StepView.swift */,
 				38C8558B28810E2500BE6968 /* EggListView.swift */,
 				38C8558D28811EA500BE6968 /* EggOptView.swift */,
+				1702998A28865BD4001A30A0 /* CountDownView.swift */,
 				38C8558F288136E300BE6968 /* Extension.swift */,
 				38A31688287E7B6C00D10554 /* NotificationController.swift */,
+				1702998C28865C26001A30A0 /* CelebrationView.swift */,
 				BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */,
 				BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */,
 				BD6F7CBA2885798F006807BC /* TimerView.swift */,
@@ -292,11 +298,13 @@
 				38C8558C28810E2500BE6968 /* EggListView.swift in Sources */,
 				38A31689287E7B6C00D10554 /* NotificationController.swift in Sources */,
 				38C8558E28811EA500BE6968 /* EggOptView.swift in Sources */,
+				1702998D28865C26001A30A0 /* CelebrationView.swift in Sources */,
 				38A31687287E7B6C00D10554 /* ContentView.swift in Sources */,
 				BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */,
 				38A3168D287E7B6C00D10554 /* ComplicationController.swift in Sources */,
 				38C855922884F02D00BE6968 /* StepView.swift in Sources */,
 				38A31685287E7B6C00D10554 /* PocketKitchenApp.swift in Sources */,
+				1702998B28865BD4001A30A0 /* CountDownView.swift in Sources */,
 				38A3168B287E7B6C00D10554 /* NotificationView.swift in Sources */,
 				38C85590288136E300BE6968 /* Extension.swift in Sources */,
 			);

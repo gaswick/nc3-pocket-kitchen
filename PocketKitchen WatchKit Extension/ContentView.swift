@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         StepView(stepCount: 1, allStepCount: 5)
+        //EggListView()
     }
     
 }
