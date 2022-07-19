@@ -9,13 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                ForEach(0..<100) {
-                    Text("Row \($0)")
-                }
-            }
-        }
+        StepView(stepCount: 1, allStepCount: 5)
     }
     
 }
