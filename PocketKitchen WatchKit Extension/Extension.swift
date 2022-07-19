@@ -38,3 +38,14 @@ struct ThemeAnimationStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0) //<- change scale value as per need. scaleEffect(configuration.isPressed ? 1.2 : 1.0)
     }
 }
+
+struct Recipe {
+    var recipeName: String
+    var type: [String]?
+    var size: [String]?
+    var tools: [String]
+    var ingredients: [[String]]
+    var instruction: [[String]]
+    var timer: [[Int]]
+    var timerShowed: [Int]
+}

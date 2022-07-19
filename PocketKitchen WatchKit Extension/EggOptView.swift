@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+var recipes = ContentView().recipes
+
 struct EggOptView: View {
     var optEgg: String
+    
     var eggChoices: [String:[String]] = [
-        "Boiled":["Soft", "Medium", "Hard"],
-        "Fried":["Sunny Side Up", "Over Easy", "Over Hard"]
+        
+        "Boiled":recipes[0].type!,
+            "Fried":recipes[2].type!
+//        "Boiled":["Soft", "Medium", "Hard"],
+//        "Fried":["Sunny Side Up", "Over Easy", "Over Hard"]
     ]
     
     var body: some View {
@@ -22,11 +28,9 @@ struct EggOptView: View {
                 .frame(height: 40, alignment: .center)
                 .padding(.top, 15)
             
-            customNavLink(destination: AnyView(EggOptView(optEgg: "Boiled")), text: eggChoices[optEgg]![0])
+            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: eggChoices[optEgg]![0])
             customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: eggChoices[optEgg]![1])
             customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: eggChoices[optEgg]![2])
-            
-            
             
 
         }
