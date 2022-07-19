@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct CountDownView: View {
+    var optEgg: String
     @State var timeVal = 3
     @State var progress : Float = 0.0
     var fill : Float = 0.33
     
     var body: some View {
         VStack {
-            Text("Boiled Egg")
+            Text(optEgg)
                 .font(.system(size: 16))
                 .bold()
                 .padding(.bottom, 20)
@@ -68,6 +69,6 @@ struct CountDownView: View {
 
 struct CountDownView_Previews: PreviewProvider {
     static var previews: some View {
-        CountDownView()
+        CountDownView(optEgg: "Boiled")
     }
 }
