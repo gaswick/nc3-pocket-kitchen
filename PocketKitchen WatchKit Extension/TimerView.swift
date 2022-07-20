@@ -23,7 +23,8 @@ struct TimerView: View {
     }
     
     var body: some View {
-        let fill : Float = Float(1)/Float(timeRemaining)
+        let maxTime = timeRemaining
+        let fill : Float = Float(1)/Float(maxTime)
         let _ = print(fill)
         VStack {
             ZStack {

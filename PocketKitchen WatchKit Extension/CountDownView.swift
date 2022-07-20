@@ -17,7 +17,7 @@ struct CountDownView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(optEgg)
+                Text("\(optEgg) Egg")
                     .font(.system(size: 16))
                     .bold()
                     .padding(.bottom, 20)
