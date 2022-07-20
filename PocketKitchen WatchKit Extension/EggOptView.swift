@@ -23,6 +23,8 @@ struct EggOptView: View {
             Text("How do you like your \n\(optEgg) eggs?")
                 .font(.system(size: 14))
                 .multilineTextAlignment(.center)
+                .frame(height: 40)
+                .padding(.top, 15)
               //  .frame(height: 40, alignment: .center)
               //8  .padding(.top, 15)
             
