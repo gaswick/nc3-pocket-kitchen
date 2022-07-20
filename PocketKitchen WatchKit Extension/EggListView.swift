@@ -8,7 +8,7 @@
 import SwiftUI
 
 var recipes = ContentView().recipes
-var chosenOpt = ContentView().chosenOpt
+var chosenOpt:[Int] = ContentView().chosenOpt
 
 struct EggListView: View {
     
