@@ -78,7 +78,7 @@ struct StepView: View {
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
         }.navigationBarBackButtonHidden(true)
-            .navigate(to: CelebrationView(), when: $isDone).buttonStyle(.plain)
+            .navigate(to: CelebrationView(optEgg: optEgg), when: $isDone).buttonStyle(.plain)
             
 
     }
