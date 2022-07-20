@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1702998B28865BD4001A30A0 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702998A28865BD4001A30A0 /* CountDownView.swift */; };
 		1702998D28865C26001A30A0 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702998C28865C26001A30A0 /* CelebrationView.swift */; };
+		3844A6B528884A91002E18A5 /* EggOpt2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844A6B428884A91002E18A5 /* EggOpt2View.swift */; };
 		38A31675287E7B6900D10554 /* PocketKitchen WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 38A31674287E7B6900D10554 /* PocketKitchen WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38A3167A287E7B6C00D10554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A31679287E7B6C00D10554 /* Assets.xcassets */; };
 		38A31680287E7B6C00D10554 /* PocketKitchen WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38A3167F287E7B6C00D10554 /* PocketKitchen WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		1702998A28865BD4001A30A0 /* CountDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		1702998C28865C26001A30A0 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
+		3844A6B428884A91002E18A5 /* EggOpt2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggOpt2View.swift; sourceTree = "<group>"; };
 		38A31670287E7B6900D10554 /* PocketKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A31674287E7B6900D10554 /* PocketKitchen WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PocketKitchen WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A31679287E7B6C00D10554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				38C855912884F02D00BE6968 /* StepView.swift */,
 				38C8558B28810E2500BE6968 /* EggListView.swift */,
 				38C8558D28811EA500BE6968 /* EggOptView.swift */,
+				3844A6B428884A91002E18A5 /* EggOpt2View.swift */,
 				1702998A28865BD4001A30A0 /* CountDownView.swift */,
 				38C8558F288136E300BE6968 /* Extension.swift */,
 				38A31688287E7B6C00D10554 /* NotificationController.swift */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */,
+				3844A6B528884A91002E18A5 /* EggOpt2View.swift in Sources */,
 				BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */,
 				38C8558C28810E2500BE6968 /* EggListView.swift in Sources */,
 				38A31689287E7B6C00D10554 /* NotificationController.swift in Sources */,

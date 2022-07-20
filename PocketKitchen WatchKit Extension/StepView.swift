@@ -24,11 +24,46 @@ struct StepView: View {
                     ScrollView{
                         Text("**Step \(index)** of \(allStepCount)")
                             .frame(maxHeight: .infinity, alignment: .top)
+                        if(optEgg == "Boiled"){
+                            if(recipe.timerShowed[sth-1]){
+                                TimerView(timeRemaining: recipe.timer[chosenOpt[0]][chosenOpt[1]] * 60)
+                                    .padding(.top, 20)
+                            }
+                        }
+                        else if(optEgg == "Scrambled"){
+                            if(recipe.timerShowed[sth-1]) {
+                                if(recipe.timer[0][0] * 60 > 0){
+                                    TimerView(timeRemaining: recipe.timer[0][0] * 60)
+                                        .padding(.top, 20)
+                                }
+                                
+                            }
+                        }
+                        else { //Fried
+                            if(sth == 3){
+                                if(recipe.timerShowed[sth-1]){
+                                    if(recipe.timer[0][0] * 60 > 0) {
+                                        TimerView(timeRemaining: recipe.timer[0][0] * 60)
+                                            .padding(.top, 20)
+                                    }
+                                }
+                            }else{
+                                if(recipe.timerShowed[sth-1]) {
+                                    if(recipe.timer[1][chosenOpt[0]] * 60 > 0) {
+                                        TimerView(timeRemaining: recipe.timer[1][chosenOpt[0]] * 60)
+                                            .padding(.top, 20)
+                                    }else{
+                                        Text("").padding(.top, 25)
+                                    }
+                                }
+                            }
+                        }
+                        
                         Text(chosen[0])
                             .bold()
                             .font(.system(size: 13))
                             .multilineTextAlignment(.center)
-                            .padding(.top, 35)
+                            .padding(.top, recipe.timerShowed[sth-1] ? 10 : 35)
                         if(chosen.count == 2){
                             Text(chosen[1])
                                 .font(.system(size: 10))

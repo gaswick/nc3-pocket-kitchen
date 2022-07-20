@@ -47,7 +47,7 @@ struct Recipe {
     var ingredients: [[String]]
     var instruction: [[String]]
     var timer: [[Int]]
-    var timerShowed: [Int]
+    var timerShowed: [Bool]
     var skill: String
 }
 
