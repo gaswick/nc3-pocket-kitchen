@@ -8,7 +8,9 @@
 import SwiftUI
 //masih belum sampai nol
 struct TimerView: View {
-    @State var timeRemaining = 120
+    @State var timeRemaining = 180
+    @State var progress : Float = 0.0
+
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     func convertSecondToTime(timeInSeconds : Int) ->
@@ -21,14 +23,49 @@ struct TimerView: View {
     }
     
     var body: some View {
-        
+        let fill : Float = Float(1)/Float(timeRemaining)
+        let _ = print(fill)
         VStack {
-            Text(convertSecondToTime(timeInSeconds: timeRemaining)).padding().font(.system(size: 60)).onReceive(timer){ _ in
-                if(timeRemaining>0){
-                    timeRemaining -= 1
+            ZStack {
+                
+                Text(convertSecondToTime(timeInSeconds: timeRemaining)).bold().padding().font(.system(size: 20)).onReceive(timer){ _ in
+                    if(timeRemaining>0){
+//                        timeRemaining -= 1
+                    }
+                        
                 }
+                    .padding()
+                    .onAppear{
+                        Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
+                            if timeRemaining > 0 {
+                                timeRemaining -= 1
+                                    
+                                
+                                if (progress) < 1.0 {
+                                    progress += fill
+                                }
+                            }
+                            
+                        }
+                }
+                
                     
+            
+                Circle()
+                    .stroke(lineWidth: 6.0)
+                    .opacity(1)
+                    .foregroundColor(Color.gray)
+                    .frame(width: 87, height: 87)
+        
+                Circle()
+                    .trim(from: 0.0, to: CGFloat(min(self.progress, 1.0)))
+                    .stroke(style: StrokeStyle(lineWidth: 6.0, lineCap: .round, lineJoin: .round))
+                    .frame(width: 87, height: 87)
+                    .rotationEffect(Angle(degrees: 270))
+                    .animation(.easeInOut(duration: 0.5))
+                    .foregroundColor(.orange)
             }
+
         }
     }
 }

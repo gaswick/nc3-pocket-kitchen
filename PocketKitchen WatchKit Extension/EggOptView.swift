@@ -7,16 +7,8 @@
 
 import SwiftUI
 
-var recipes = ContentView().recipes
-
 struct EggOptView: View {
     var optEgg: String
-    
-//    var eggChoices: [String:[String]] = [
-//        
-//        "Boiled":recipes[optEgg]!.type!,
-//        "Fried":recipes[optEgg]!.type!
-//    ]
     
     var body: some View {
         VStack {
@@ -27,13 +19,29 @@ struct EggOptView: View {
                 .padding(.top, 15)
               //  .frame(height: 40, alignment: .center)
               //8  .padding(.top, 15)
-            
-            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![0])
-            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![1])
-            customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![2])
-//            customNavLink(destination: AnyView(EggOptView(optEgg: "Scrambled")), text: recipes[optEgg]!.type![1])
-//            customNavLink(destination: AnyView(EggOptView(optEgg: "Fried")), text: recipes[optEgg]!.type![2])
-            
+            if(optEgg == "Fried"){
+                customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![0]).onTapGesture {
+                    chosenOpt.append(0)
+                }
+                customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![1]).onTapGesture {
+                    chosenOpt.append(1)
+                }
+                customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![2]).onTapGesture {
+                    chosenOpt.append(2)
+                }
+
+            }else{
+                customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![0]).onTapGesture {
+                    chosenOpt.append(0)
+                }
+                customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![1])
+                    .onTapGesture {
+                        chosenOpt.append(1)
+                    }
+                customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![2]).onTapGesture {
+                    chosenOpt.append(2)
+                }
+            }
 
         }
     }

@@ -20,7 +20,10 @@ struct IngredientsPreparationView: View {
                 }
             }
             
-            NavigationLink("Next", destination: EggOptView(optEgg: optEgg))
+            NavigationLink("Next",
+                           destination: (optEgg == "Scrambled") ?
+                            AnyView(CountDownView(optEgg: optEgg)):
+                            AnyView(EggOptView(optEgg: optEgg)) )
                 .frame(height: 40)
                 //.padding(min(.infinity, 20))
                 //.foregroundColor(.white)
