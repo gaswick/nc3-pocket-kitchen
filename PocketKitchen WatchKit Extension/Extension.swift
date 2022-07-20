@@ -48,6 +48,7 @@ struct Recipe {
     var instruction: [[String]]
     var timer: [[Int]]
     var timerShowed: [Int]
+    var skill: String
 }
 
 extension View {
