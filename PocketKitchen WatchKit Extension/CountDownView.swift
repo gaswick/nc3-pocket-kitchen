@@ -23,7 +23,7 @@ struct CountDownView: View {
                 
             ZStack {
                 
-                NavigationLink(destination: StepView(optEgg: optEgg, stepCount: 1, allStepCount: 5), isActive: $showLinkTarget){
+                NavigationLink(destination: StepView(optEgg: optEgg), isActive: $showLinkTarget){
                     EmptyView()
                 }.buttonStyle(.plain)
             
