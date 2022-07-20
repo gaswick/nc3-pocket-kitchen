@@ -27,7 +27,7 @@ struct ContentView: View {
     ]
 
     var body: some View {
-        StepView(optEgg: "Boiled")
+        EggListView()
     }
     
 }
