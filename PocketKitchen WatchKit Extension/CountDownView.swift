@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CountDownView: View {
     var optEgg: String
+    @State var showLinkTarget = false
     @State var timeVal = 3
     @State var progress : Float = 0.0
     var fill : Float = 0.33
@@ -21,6 +22,10 @@ struct CountDownView: View {
                 .padding(.bottom, 20)
                 
             ZStack {
+                
+                NavigationLink(destination: StepView(optEgg: optEgg, stepCount: 1, allStepCount: 5), isActive: $showLinkTarget){
+                    EmptyView()
+                }.buttonStyle(.plain)
             
                 Text(progress == 0.0
                      ? "Ready"
@@ -30,7 +35,7 @@ struct CountDownView: View {
                           ? .system(size: 15)
                           : .system(size: 60))
                     .padding()
-                    .onAppear(){
+                    .onAppear{
                         Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
                             if timeVal > 1 {
                                 if (progress != 0) {
@@ -41,11 +46,14 @@ struct CountDownView: View {
                                 }
                             } else {
                                 // pindah screen
+//                                let _ = print("test")
+                                showLinkTarget = true
                             }
                             
                             
                         }
                 }
+                
                     
             
                 Circle()
