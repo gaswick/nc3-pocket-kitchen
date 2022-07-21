@@ -13,7 +13,7 @@ struct EggOpt2View: View {
     var body: some View {
         VStack {
             Text("How do you like your \n\(optEgg) eggs?")
-                .font(.system(size: 14))
+                .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .frame(height: 40)
                 .padding(.top, 15)

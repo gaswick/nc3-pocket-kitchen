@@ -22,10 +22,10 @@ struct ToolsPreparationView: View {
                 }
             }
            
-            NavigationLink("Next", destination: IngredientsPreparationView(optEgg: optEgg))
+            NavigationLink(destination: IngredientsPreparationView(optEgg: optEgg)){Text("Next").bold()}
                 .frame(height: 40)
                 //.padding(min(.infinity, 20))
-                //.foregroundColor(.white)
+                .foregroundColor(.black)
                 .background(.orange)
                 .cornerRadius(9)
         }

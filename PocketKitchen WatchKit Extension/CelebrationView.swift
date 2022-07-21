@@ -10,8 +10,9 @@
 import SwiftUI
 
 struct CelebrationView: View {
-    var skill: String = ""
-    var optEgg: String
+    //var skill: String = ""
+    //var optEgg: String
+    var recipe: Recipe
    
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct CelebrationView: View {
                 .font(.system(size: 20))
                 
               
-                Text("You’ve learned the cooking \n skill of \(recipes[optEgg]!.skill)")
+                Text("You’ve learned the cooking \n skill of \(recipe.skill)")
                 .multilineTextAlignment(.center)
                 .frame(height: 40, alignment: .center)
                 .font(.system(size: 13))
@@ -37,6 +38,6 @@ struct CelebrationView: View {
 
 struct CelebrationView_Previews: PreviewProvider {
     static var previews: some View {
-        CelebrationView(optEgg: "Boiled")
+        CelebrationView(recipe: RecipeData.recipes["Boiled"]!)
     }
 }

@@ -21,10 +21,10 @@ struct CountDownView: View {
                     .font(.system(size: 16))
                     .bold()
                     .padding(.bottom, 20)
-                let _ = print(chosenOpt)
+                //let _ = print(chosenOpt)
                 ZStack {
                     
-                    NavigationLink(destination: StepView(optEgg: optEgg), isActive: $showLinkTarget){
+                    NavigationLink(destination: StepView(recipe: RecipeData.recipes[optEgg]!, optEgg: optEgg), isActive: $showLinkTarget){
                         EmptyView()
                     }.buttonStyle(.plain)
                 

@@ -26,7 +26,7 @@ struct TimerView: View {
     var body: some View {
         let maxTime = timeRemaining
         let fill : Float = Float(1)/Float(maxTime)
-        let _ = print(fill)
+        //let _ = print(fill)
         VStack {
             ZStack {
                 
@@ -41,8 +41,6 @@ struct TimerView: View {
                         Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
                             if timeRemaining > 0 {
                                 timeRemaining -= 1
-                                    
-                                
                                 if (progress) < 1.0 {
                                     progress += fill
                                 }
@@ -54,8 +52,6 @@ struct TimerView: View {
                         }
                 }
                 
-                    
-            
                 Circle()
                     .stroke(lineWidth: 6.0)
                     .opacity(1)
