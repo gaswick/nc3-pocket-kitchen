@@ -13,7 +13,7 @@ struct CelebrationView: View {
     //var skill: String = ""
     //var optEgg: String
     var recipe: Recipe
-    @State var timeVal = 5
+    @State var timeVal = 4
     @State var showLinkTarget = false
    
     var body: some View {
@@ -26,7 +26,7 @@ struct CelebrationView: View {
                     .bold()
                 .font(.system(size: 20))
                 
-                NavigationLink(destination: EggListView(), isActive: $showLinkTarget){
+                NavigationLink(destination: ContentView(), isActive: $showLinkTarget){
                     EmptyView()
                 }.buttonStyle(.plain)
                 
@@ -36,6 +36,7 @@ struct CelebrationView: View {
                         Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
                             if timeVal > 0 {
                                 timeVal -= 1
+                                WKInterfaceDevice.current().play(WKHapticType.success)
                             } else {
                                 chosenOpt = []
                                 showLinkTarget = true
