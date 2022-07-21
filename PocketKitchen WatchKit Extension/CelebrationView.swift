@@ -13,6 +13,8 @@ struct CelebrationView: View {
     //var skill: String = ""
     //var optEgg: String
     var recipe: Recipe
+    @State var timeVal = 10
+    @State var showLinkTarget = false
    
     var body: some View {
         ZStack {
@@ -23,6 +25,24 @@ struct CelebrationView: View {
                 Text("Well Done!")
                     .bold()
                 .font(.system(size: 20))
+                
+                NavigationLink(destination: EggListView(), isActive: $showLinkTarget){
+                    EmptyView()
+                }.buttonStyle(.plain)
+                
+                Text("")
+                    .padding(.all, 0)
+                    .onAppear{
+                        Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
+                            if timeVal > 0 {
+                                timeVal -= 1
+                            } else {
+                                chosenOpt.removeAll()
+                                showLinkTarget = true
+                            }
+            
+                        }
+                }
                 
               
                 Text("You’ve learned the cooking \n skill of \(recipe.skill)")
