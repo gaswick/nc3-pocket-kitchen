@@ -4,8 +4,9 @@
 //
 //  Created by Aulia Rahmi on 18/07/22.
 //
-
+import Foundation
 import SwiftUI
+import Combine
 //masih belum sampai nol
 struct TimerView: View {
     @State var timeRemaining = 180
@@ -45,6 +46,9 @@ struct TimerView: View {
                                 if (progress) < 1.0 {
                                     progress += fill
                                 }
+                            }else{
+                                WKInterfaceDevice.current().play(WKHapticType.)
+
                             }
                             
                         }
