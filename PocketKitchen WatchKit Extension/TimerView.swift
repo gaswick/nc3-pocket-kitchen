@@ -11,6 +11,7 @@ import Combine
 struct TimerView: View {
     @State var timeRemaining = 180
     @State var progress : Float = 0.0
+    @State var hapticCounter: Int = 5
 
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -45,8 +46,12 @@ struct TimerView: View {
                                     progress += fill
                                 }
                             }else{
-                                WKInterfaceDevice.current().play(WKHapticType.stop)
-
+                                if hapticCounter > 0 {
+                                    WKInterfaceDevice.current().play(WKHapticType.stop)
+                                    hapticCounter -= 1
+                                }
+                               
+                                
                             }
                             
                         }

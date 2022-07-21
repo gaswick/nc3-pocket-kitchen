@@ -19,15 +19,15 @@ struct EggOpt2View: View {
                 .padding(.top, 15)
               
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![0])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(0)
                 })
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![1])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(1)
                 })
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![2])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(2)
                 })
 
