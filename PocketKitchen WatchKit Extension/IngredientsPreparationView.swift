@@ -16,17 +16,16 @@ struct IngredientsPreparationView: View {
                         Spacer()
                         Text(i[1]).font(.system(size: 13))
                     }
-                    
                 }
             }
             
-            NavigationLink("Next",
-                           destination: (optEgg == "Scrambled") ?
+            NavigationLink(destination: (optEgg == "Scrambled") ?
                             AnyView(CountDownView(optEgg: optEgg)):
                             AnyView(EggOptView(optEgg: optEgg)) )
+            {Text("Next").bold()}
                 .frame(height: 40)
                 //.padding(min(.infinity, 20))
-                //.foregroundColor(.white)
+                .foregroundColor(.black)
                 .background(.orange)
                 .cornerRadius(9)
         }

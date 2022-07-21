@@ -6,23 +6,32 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct StepView: View {
+    var recipe: Recipe
     var optEgg: String
+
     @State var stepCount: Int = 1
     @State var isDone = false
-        
+    
+    //var allStepCount = 0
+    @State var utterance = AVSpeechUtterance(string: "")
+    
+    init(recipe: Recipe, optEgg: String){
+        self.optEgg = optEgg
+        self.recipe = recipe
+    }
+    
     var body: some View {
-        let recipe = recipes[optEgg]!
-        let allStepCount = recipe.instruction.count
-        
+
         NavigationView {
             TabView(selection: $stepCount) {
-                ForEach(1...allStepCount ,id: \.self) {index in
+                ForEach(1...recipe.instruction.count ,id: \.self) {index in
                     let sth = index
                     let chosen = recipe.instruction[sth-1]
                     ScrollView{
-                        Text("**Step \(index)** of \(allStepCount)")
+                        Text("**Step \(index)** of \(recipe.instruction.count)")
                             .frame(maxHeight: .infinity, alignment: .top)
                         if(optEgg == "Boiled"){
                             if(recipe.timerShowed[sth-1]){
@@ -76,8 +85,10 @@ struct StepView: View {
     //                    }
                         
                         Button(action: {
-                            if stepCount != allStepCount{
+                            if stepCount != recipe.instruction.count{
                                 stepCount += 1
+                                print("next \(stepCount)")
+
                             }else{
                                 isDone = true
                             }
@@ -100,27 +111,31 @@ struct StepView: View {
                         .padding(.horizontal)
                         .buttonStyle(.plain)
                         
+                        
 
 //                        NavigationLink(destination: CelebrationView(), isActive: $isDone){
 //                            EmptyView()
 //                        }.buttonStyle(.plain)
                         
-                    }
-
-                    .tag(index)
+                    }.tag(index)
+                     .onAppear(){
+                        print(stepCount)
+                        utterance = AVSpeechUtterance(string: recipe.instruction[stepCount-1][0])
+                        
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        utterance.rate = 0.4
+                        let synthesizer = AVSpeechSynthesizer()
+                        synthesizer.speak(utterance)
+                     }
                 }
-                
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                
         }.navigationBarBackButtonHidden(true)
-            .navigate(to: CelebrationView(optEgg: optEgg), when: $isDone).buttonStyle(.plain)
-            
-
+         .navigate(to: CelebrationView(recipe: recipe), when: $isDone).buttonStyle(.plain)
     }
 }
 
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
-        StepView(optEgg: "Boiled")
+        StepView(recipe: RecipeData.recipes["Boiled"]!, optEgg: "Boiled")
     }
 }
