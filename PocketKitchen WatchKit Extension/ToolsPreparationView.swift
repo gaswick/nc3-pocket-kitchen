@@ -22,11 +22,13 @@ struct ToolsPreparationView: View {
                 }
             }
            
-            NavigationLink(destination: IngredientsPreparationView(optEgg: optEgg)){Text("Next").bold()}
-                .frame(width: 183.0, height: 40.0)
-                .background(RoundedRectangle(cornerRadius: 10)
-                .fill(Color.init(UIColor(rgb: 0xEE921D)))
-                )
+            NavigationLink(destination: IngredientsPreparationView(optEgg: optEgg)){Text("Next").bold()
+                    .frame(width: 183.0, height: 40.0)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.init(UIColor(rgb: 0xEE921D)))
+                    )
+
+            }
                 .foregroundColor(.black)
                 .buttonStyle(.plain)
                 .padding(.vertical, 1)
