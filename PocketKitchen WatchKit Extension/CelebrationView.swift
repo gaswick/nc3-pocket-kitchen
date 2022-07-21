@@ -15,6 +15,8 @@ struct CelebrationView: View {
     var recipe: Recipe
     @State var timeVal = 4
     @State var showLinkTarget = false
+    @State var isRemoved = false
+    @State var repeater = true
    
     var body: some View {
         ZStack {
@@ -26,20 +28,25 @@ struct CelebrationView: View {
                     .bold()
                 .font(.system(size: 20))
                 
-                NavigationLink(destination: ContentView(), isActive: $showLinkTarget){
+                NavigationLink(destination: EggListView(), isActive: $showLinkTarget){
                     EmptyView()
                 }.buttonStyle(.plain)
                 
                 Text("")
                     .padding(.all, 0)
                     .onAppear{
-                        Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
+                        Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: repeater) { _ in
                             if timeVal > 0 {
                                 timeVal -= 1
                                 WKInterfaceDevice.current().play(WKHapticType.success)
                             } else {
-                                chosenOpt = []
+                                if !isRemoved{
+                                    chosenOpt = []
+                                    isRemoved = true
+                                }
+                                
                                 showLinkTarget = true
+                                repeater = false
                             }
             
                         }
