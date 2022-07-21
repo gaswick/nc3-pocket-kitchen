@@ -37,12 +37,13 @@ struct customNavLink: View{
     var body: some View{
         NavigationLink(destination: destination){
             Text(text).bold()
+                .frame(width: 183.0, height: 40.0)
+                .background(RoundedRectangle(cornerRadius: 22)
+                .fill(Color.init(UIColor(rgb: 0xEE921D)))
+                )
             
         }
-        .frame(width: 183.0, height: 40.0)
-        .background(RoundedRectangle(cornerRadius: 22)
-        .fill(Color.init(UIColor(rgb: 0xEE921D)))
-        )
+        
         .foregroundColor(.black)
         .buttonStyle(.plain)
         .padding(.vertical, 1)
