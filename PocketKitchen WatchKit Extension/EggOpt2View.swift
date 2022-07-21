@@ -13,21 +13,21 @@ struct EggOpt2View: View {
     var body: some View {
         VStack {
             Text("How do you like your \n\(optEgg) eggs?")
-                .font(.system(size: 14))
+                .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .frame(height: 40)
                 .padding(.top, 15)
               
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![0])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(0)
                 })
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![1])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(1)
                 })
             customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.size![2])
-                .simultaneousGesture(TapGesture().onEnded{
+                .simultaneousGesture(TapGesture().onEnded{ _ in
                     chosenOpt.append(2)
                 })
 

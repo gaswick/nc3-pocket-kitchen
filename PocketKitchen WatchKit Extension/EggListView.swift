@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-var recipes = ContentView().recipes
+//var recipes = ContentView().recipes
+var recipes = RecipeData.recipes
 var chosenOpt:[Int] = ContentView().chosenOpt
 
 struct EggListView: View {
@@ -16,7 +17,7 @@ struct EggListView: View {
         NavigationView {
             VStack {
                 Text("How do you like your \n eggs?")
-                    .font(.system(size: 14))
+                    .font(.system(size: 15))
                     .multilineTextAlignment(.center)
                     .frame(height: 40, alignment: .center)
                     .padding(.top)
@@ -24,9 +25,6 @@ struct EggListView: View {
                 customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Boiled")), text: "Boiled")
                 customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Scrambled")), text: "Scrambled")
                 customNavLink(destination: AnyView(ToolsPreparationView(optEgg: "Fried")), text: "Fried")
-                    
-                    
-                
             }
         }
     }

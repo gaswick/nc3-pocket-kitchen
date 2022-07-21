@@ -10,8 +10,13 @@
 import SwiftUI
 
 struct CelebrationView: View {
-    var skill: String = ""
-    var optEgg: String
+    //var skill: String = ""
+    //var optEgg: String
+    var recipe: Recipe
+    @State var timeVal = 4
+    @State var showLinkTarget = false
+    @State var isRemoved = false
+    @State var repeater = true
    
     var body: some View {
         ZStack {
@@ -23,8 +28,32 @@ struct CelebrationView: View {
                     .bold()
                 .font(.system(size: 20))
                 
+                NavigationLink(destination: EggListView(), isActive: $showLinkTarget){
+                    EmptyView()
+                }.buttonStyle(.plain)
+                
+                Text("")
+                    .padding(.all, 0)
+                    .onAppear{
+                        Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: repeater) { _ in
+                            if timeVal > 0 {
+                                timeVal -= 1
+                                WKInterfaceDevice.current().play(WKHapticType.success)
+                            } else {
+                                if !isRemoved{
+                                    chosenOpt = []
+                                    isRemoved = true
+                                }
+                                
+                                showLinkTarget = true
+                                repeater = false
+                            }
+            
+                        }
+                }
+                
               
-                Text("You’ve learned the cooking \n skill of \(recipes[optEgg]!.skill)")
+                Text("You’ve learned the cooking \n skill of \(recipe.skill)")
                 .multilineTextAlignment(.center)
                 .frame(height: 40, alignment: .center)
                 .font(.system(size: 13))
@@ -37,6 +66,6 @@ struct CelebrationView: View {
 
 struct CelebrationView_Previews: PreviewProvider {
     static var previews: some View {
-        CelebrationView(optEgg: "Boiled")
+        CelebrationView(recipe: RecipeData.recipes["Boiled"]!)
     }
 }

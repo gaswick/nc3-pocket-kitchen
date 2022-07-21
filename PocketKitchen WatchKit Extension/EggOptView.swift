@@ -13,7 +13,7 @@ struct EggOptView: View {
     var body: some View {
         VStack {
             Text("How do you like your \n\(optEgg) eggs?")
-                .font(.system(size: 14))
+                .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .frame(height: 40)
                 .padding(.top, 15)
@@ -21,29 +21,29 @@ struct EggOptView: View {
               //8  .padding(.top, 15)
             if(optEgg == "Fried"){
                 customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![0])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(0)
                     })
                 customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![1])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(1)
                     })
                 customNavLink(destination: AnyView(CountDownView(optEgg: optEgg)), text: recipes[optEgg]!.type![2])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(2)
                     })
 
             }else{
                 customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![0])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(0)
                     })
                 customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![1])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(1)
                     })
                 customNavLink(destination: AnyView(EggOpt2View(optEgg: optEgg)), text: recipes[optEgg]!.type![2])
-                    .simultaneousGesture(TapGesture().onEnded{
+                    .simultaneousGesture(TapGesture().onEnded{ _ in
                         chosenOpt.append(2)
                     })
             }

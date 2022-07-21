@@ -27,6 +27,7 @@
 		BD6F7CAE2881152E006807BC /* IngredientsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */; };
 		BD6F7CB028811F58006807BC /* ToolsPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */; };
 		BD6F7CBB2885798F006807BC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F7CBA2885798F006807BC /* TimerView.swift */; };
+		BD817C1628897BBC00007743 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD817C1528897BBC00007743 /* RecipeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BD6F7CAD2881152E006807BC /* IngredientsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsPreparationView.swift; sourceTree = "<group>"; };
 		BD6F7CAF28811F58006807BC /* ToolsPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsPreparationView.swift; sourceTree = "<group>"; };
 		BD6F7CBA2885798F006807BC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BD817C1528897BBC00007743 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				38A31684287E7B6C00D10554 /* PocketKitchenApp.swift */,
 				38A31686287E7B6C00D10554 /* ContentView.swift */,
+				BD817C1528897BBC00007743 /* RecipeData.swift */,
 				38C855912884F02D00BE6968 /* StepView.swift */,
 				38C8558B28810E2500BE6968 /* EggListView.swift */,
 				38C8558D28811EA500BE6968 /* EggOptView.swift */,
@@ -309,6 +312,7 @@
 				38C855922884F02D00BE6968 /* StepView.swift in Sources */,
 				38A31685287E7B6C00D10554 /* PocketKitchenApp.swift in Sources */,
 				1702998B28865BD4001A30A0 /* CountDownView.swift in Sources */,
+				BD817C1628897BBC00007743 /* RecipeData.swift in Sources */,
 				38A3168B287E7B6C00D10554 /* NotificationView.swift in Sources */,
 				38C85590288136E300BE6968 /* Extension.swift in Sources */,
 			);
@@ -449,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PocketKitchen WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 5H2NFN5MLL;
+				DEVELOPMENT_TEAM = XNC2HL8P65;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PocketKitchen WatchKit Extension/Info.plist";
@@ -481,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PocketKitchen WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 5H2NFN5MLL;
+				DEVELOPMENT_TEAM = XNC2HL8P65;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PocketKitchen WatchKit Extension/Info.plist";
@@ -512,9 +516,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5H2NFN5MLL;
+				DEVELOPMENT_TEAM = XNC2HL8P65;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PocketKitchen_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "PocketKitchen WatchKit App";
@@ -537,9 +542,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5H2NFN5MLL;
+				DEVELOPMENT_TEAM = XNC2HL8P65;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PocketKitchen_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "PocketKitchen WatchKit App";

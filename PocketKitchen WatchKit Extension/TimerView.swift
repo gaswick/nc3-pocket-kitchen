@@ -4,12 +4,14 @@
 //
 //  Created by Aulia Rahmi on 18/07/22.
 //
-
+import Foundation
 import SwiftUI
+import Combine
 //masih belum sampai nol
 struct TimerView: View {
-    @State var timeRemaining = 180
+    @State var timeRemaining = 3
     @State var progress : Float = 0.0
+    @State var hapticCounter: Int = 5
 
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -25,7 +27,7 @@ struct TimerView: View {
     var body: some View {
         let maxTime = timeRemaining
         let fill : Float = Float(1)/Float(maxTime)
-        let _ = print(fill)
+        //let _ = print(fill)
         VStack {
             ZStack {
                 
@@ -40,18 +42,21 @@ struct TimerView: View {
                         Timer.scheduledTimer(withTimeInterval: 1.0,  repeats: true) { _ in
                             if timeRemaining > 0 {
                                 timeRemaining -= 1
-                                    
-                                
                                 if (progress) < 1.0 {
                                     progress += fill
                                 }
+                            }else{
+                                if hapticCounter > 0 {
+                                    WKInterfaceDevice.current().play(WKHapticType.stop)
+                                    hapticCounter -= 1
+                                }
+                               
+                                
                             }
                             
                         }
                 }
                 
-                    
-            
                 Circle()
                     .stroke(lineWidth: 6.0)
                     .opacity(1)

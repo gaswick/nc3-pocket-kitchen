@@ -22,12 +22,20 @@ struct ToolsPreparationView: View {
                 }
             }
            
-            NavigationLink("Next", destination: IngredientsPreparationView(optEgg: optEgg))
-                .frame(height: 40)
-                //.padding(min(.infinity, 20))
-                //.foregroundColor(.white)
-                .background(.orange)
-                .cornerRadius(9)
+            NavigationLink(destination: IngredientsPreparationView(optEgg: optEgg)){Text("Next").bold()}
+                .frame(width: 183.0, height: 40.0)
+                .background(RoundedRectangle(cornerRadius: 10)
+                .fill(Color.init(UIColor(rgb: 0xEE921D)))
+                )
+                .foregroundColor(.black)
+                .buttonStyle(.plain)
+                .padding(.vertical, 1)
+                .buttonStyle(ThemeAnimationStyle())
+//                .frame(height: 40)
+//                //.padding(min(.infinity, 20))
+//                .foregroundColor(.black)
+//                .background(.orange)
+//                .cornerRadius(9)
         }
     }
 }
