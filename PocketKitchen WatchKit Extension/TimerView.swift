@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 //masih belum sampai nol
 struct TimerView: View {
-    @State var timeRemaining = 180
+    @State var timeRemaining = 3
     @State var progress : Float = 0.0
     @State var hapticCounter: Int = 5
 

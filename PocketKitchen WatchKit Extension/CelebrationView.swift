@@ -13,7 +13,7 @@ struct CelebrationView: View {
     //var skill: String = ""
     //var optEgg: String
     var recipe: Recipe
-    @State var timeVal = 10
+    @State var timeVal = 5
     @State var showLinkTarget = false
    
     var body: some View {
@@ -37,7 +37,7 @@ struct CelebrationView: View {
                             if timeVal > 0 {
                                 timeVal -= 1
                             } else {
-                                chosenOpt.removeAll()
+                                chosenOpt = []
                                 showLinkTarget = true
                             }
             

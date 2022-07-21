@@ -41,10 +41,12 @@ struct CountDownView: View {
                                 if timeVal > 1 {
                                     if (progress != 0) {
                                         timeVal -= 1
+                                        
                                     }
                                     if (progress) < 1.0 {
                                         progress += fill
                                     }
+                                    WKInterfaceDevice.current().play(WKHapticType.directionDown)
                                 } else {
                                     // pindah screen
     //                                let _ = print("test")
