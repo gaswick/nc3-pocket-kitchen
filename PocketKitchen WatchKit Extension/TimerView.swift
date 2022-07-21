@@ -47,7 +47,7 @@ struct TimerView: View {
                                     progress += fill
                                 }
                             }else{
-                                WKInterfaceDevice.current().play(WKHapticType.)
+                                WKInterfaceDevice.current().play(WKHapticType.stop)
 
                             }
                             
